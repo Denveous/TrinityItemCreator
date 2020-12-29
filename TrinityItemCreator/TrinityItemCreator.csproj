@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E1FA206C-62FC-4AB2-81A4-416D09E0495D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TrinityItemCreator</RootNamespace>
+    <AssemblyName>TrinityItemCreator</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\TrinityItemCreator.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Google.Protobuf, Version=3.5.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.5.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.12\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dialog Forms\Form_DB_Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog Forms\Form_DB_Info.Designer.cs">
+      <DependentUpon>Form_DB_Info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog Forms\Form_Save_Custom_Template.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog Forms\Form_Save_Custom_Template.Designer.cs">
+      <DependentUpon>Form_Save_Custom_Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog Forms\Form_Load_Custom_Template.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog Forms\Form_Load_Custom_Template.Designer.cs">
+      <DependentUpon>Form_Load_Custom_Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyClass\BinaryReaderExtensions.cs" />
+    <Compile Include="MyClass\DBC.cs" />
+    <Compile Include="MyClass\DBCReader.cs" />
+    <Compile Include="MyClass\Item.cs" />
+    <Compile Include="MyClass\MyData.cs" />
+    <Compile Include="MyClass\MyExtensions.cs" />
+    <Compile Include="MyClass\QueryHandler.cs" />
+    <Compile Include="MyControls\MyOpacuePanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyControls\MyTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Form_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Main.Designer.cs">
+      <DependentUpon>Form_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog Forms\Form_Default_Templates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog Forms\Form_Default_Templates.Designer.cs">
+      <DependentUpon>Form_Default_Templates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyClass\Functions.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Dialog Forms\Form_Bag_Family_Mask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog Forms\Form_Bag_Family_Mask.Designer.cs">
+      <DependentUpon>Form_Bag_Family_Mask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog Forms\Form_Allowable_Class.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog Forms\Form_Allowable_Class.Designer.cs">
+      <DependentUpon>Form_Allowable_Class.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog Forms\Form_DisplayID_Finder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog Forms\Form_DisplayID_Finder.Designer.cs">
+      <DependentUpon>Form_DisplayID_Finder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog Forms\Form_Item_Description.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog Forms\Form_Item_Description.Designer.cs">
+      <DependentUpon>Form_Item_Description.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog Forms\Form_Flags_Custom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog Forms\Form_Flags_Custom.Designer.cs">
+      <DependentUpon>Form_Flags_Custom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog Forms\Form_Flags_Extra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog Forms\Form_Flags_Extra.Designer.cs">
+      <DependentUpon>Form_Flags_Extra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog Forms\Form_Flags.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog Forms\Form_Flags.Designer.cs">
+      <DependentUpon>Form_Flags.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog Forms\Form_Stats_Generator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog Forms\Form_Stats_Generator.Designer.cs">
+      <DependentUpon>Form_Stats_Generator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog Forms\Form_Other_Columns.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog Forms\Form_Other_Columns.Designer.cs">
+      <DependentUpon>Form_Other_Columns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog Forms\Form_Allowable_Race.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog Forms\Form_Allowable_Race.Designer.cs">
+      <DependentUpon>Form_Allowable_Race.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog Forms\Form_Resistances.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog Forms\Form_Resistances.Designer.cs">
+      <DependentUpon>Form_Resistances.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Dialog Forms\Form_DB_Info.resx">
+      <DependentUpon>Form_DB_Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Main.resx">
+      <DependentUpon>Form_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog Forms\Form_Default_Templates.resx">
+      <DependentUpon>Form_Default_Templates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog Forms\Form_Save_Custom_Template.resx">
+      <DependentUpon>Form_Save_Custom_Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog Forms\Form_Load_Custom_Template.resx">
+      <DependentUpon>Form_Load_Custom_Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog Forms\Form_Bag_Family_Mask.resx">
+      <DependentUpon>Form_Bag_Family_Mask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog Forms\Form_Allowable_Class.resx">
+      <DependentUpon>Form_Allowable_Class.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog Forms\Form_DisplayID_Finder.resx">
+      <DependentUpon>Form_DisplayID_Finder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog Forms\Form_Item_Description.resx">
+      <DependentUpon>Form_Item_Description.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog Forms\Form_Flags_Custom.resx">
+      <DependentUpon>Form_Flags_Custom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog Forms\Form_Flags_Extra.resx">
+      <DependentUpon>Form_Flags_Extra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog Forms\Form_Flags.resx">
+      <DependentUpon>Form_Flags.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog Forms\Form_Stats_Generator.resx">
+      <DependentUpon>Form_Stats_Generator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog Forms\Form_Other_Columns.resx">
+      <DependentUpon>Form_Other_Columns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog Forms\Form_Allowable_Race.resx">
+      <DependentUpon>Form_Allowable_Race.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog Forms\Form_Resistances.resx">
+      <DependentUpon>Form_Resistances.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="data\displayidlist.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\itemdata.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\itemheader.dbc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\small_petbattle_health_down.jpg" />
+    <None Include="Resources\Copy_File-512.png" />
+    <None Include="Resources\icon_setting.png" />
+    <None Include="Resources\icon_templates.png" />
+    <None Include="Resources\icon_export.png" />
+    <None Include="Resources\icon_sql.png" />
+    <None Include="Resources\icon_clipboard.png" />
+    <None Include="Resources\icon_right_arrow_3.png" />
+    <None Include="Resources\icon_right_arrow_2.png" />
+    <None Include="Resources\icon_right_arrow_1.png" />
+    <None Include="Resources\icon_functions.png" />
+    <None Include="Resources\icon_about.png" />
+    <None Include="Resources\icon_bag.png" />
+    <None Include="Resources\icon_import.png" />
+    <None Include="Resources\icon_database.png" />
+    <None Include="Resources\icon_dbc.png" />
+    <None Include="Resources\icon_db_connection.png" />
+    <None Include="Resources\icon_sql_prefix.png" />
+    <None Include="Resources\icon_more.png" />
+    <Content Include="templates\My First Template Example.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TrinityItemCreator.ico" />
+    <Content Include="Resources\large_ability_hunter_wildquiver.jpg" />
+    <Content Include="Resources\large_ability_warrior_weaponmastery.jpg" />
+    <Content Include="Resources\large_achievement_bg_captureflag_eos.jpg" />
+    <Content Include="Resources\large_achievement_bg_captureflag_wsg.jpg" />
+    <Content Include="Resources\large_achievement_bg_interruptx_flagcapture_attempts.jpg" />
+    <Content Include="Resources\large_achievement_quests_completed_06.jpg" />
+    <Content Include="Resources\large_inv_chest_mail_11.jpg" />
+    <Content Include="Resources\large_inv_enchant_formulaepic_01.jpg" />
+    <Content Include="Resources\large_inv_inscription_minorglyph17.jpg" />
+    <Content Include="Resources\large_inv_jewelcrafting_gem_37.jpg" />
+    <Content Include="Resources\large_inv_misc_ammo_bullet_06.jpg" />
+    <Content Include="Resources\large_inv_misc_bag_14.jpg" />
+    <Content Include="Resources\large_inv_misc_bag_soulbag.jpg" />
+    <Content Include="Resources\large_inv_misc_bomb_04.jpg" />
+    <Content Include="Resources\large_inv_misc_dust_infinite.jpg" />
+    <Content Include="Resources\large_inv_misc_head_02.jpg" />
+    <Content Include="Resources\large_inv_misc_key_15.jpg" />
+    <Content Include="Resources\large_inv_misc_tournaments_tabard_bloodelf.jpg" />
+    <Content Include="Resources\large_inv_potion_107.jpg" />
+    <Content Include="Resources\large_inv_tradeskillitem_02.jpg" />
+    <Content Include="Resources\medium_achievement_bg_captureflag_eos.jpg" />
+    <Content Include="Resources\medium_achievement_bg_captureflag_wsg.jpg" />
+    <Content Include="Resources\medium_achievement_bg_interruptx_flagcapture_attempts.jpg" />
+    <None Include="Resources\small_ability_vanish.jpg" />
+    <None Include="Resources\small_spell_arcane_studentofmagic.jpg" />
+    <None Include="Resources\small_petbattle_health.jpg" />
+    <None Include="Resources\small_achievement_character_undead_male.jpg" />
+    <None Include="Resources\small_achievement_character_troll_male.jpg" />
+    <None Include="Resources\small_achievement_character_tauren_male.jpg" />
+    <None Include="Resources\small_achievement_character_orc_male.jpg" />
+    <None Include="Resources\small_achievement_character_nightelf_female.jpg" />
+    <None Include="Resources\small_achievement_character_human_female.jpg" />
+    <None Include="Resources\small_achievement_character_gnome_male.jpg" />
+    <None Include="Resources\small_achievement_character_dwarf_male.jpg" />
+    <None Include="Resources\small_achievement_character_draenei_female.jpg" />
+    <None Include="Resources\small_achievement_character_bloodelf_female.jpg" />
+    <None Include="Resources\small_spell_shaman_improvedstormstrike.jpg" />
+    <None Include="Resources\small_spell_holy_searinglightpriest.jpg" />
+    <None Include="Resources\small_spell_deathknight_classicon.jpg" />
+    <None Include="Resources\small_ability_warrior_savageblow.jpg" />
+    <None Include="Resources\small_ability_warlock_improvedsoulleech.jpg" />
+    <None Include="Resources\small_ability_rogue_dualweild.jpg" />
+    <None Include="Resources\small_ability_paladin_hammeroftherighteous.jpg" />
+    <None Include="Resources\small_ability_mage_frostfirebolt.jpg" />
+    <None Include="Resources\small_ability_hunter_snipershot.jpg" />
+    <None Include="Resources\small_ability_druid_improvedtreeform.jpg" />
+    <None Include="Resources\medium_inv_misc_bag_09_green.jpg" />
+    <Content Include="Resources\medium_inv_misc_bag_14.jpg" />
+    <None Include="Resources\medium_inv_misc_enggizmos_26.jpg" />
+    <Content Include="Resources\medium_inv_misc_head_02.jpg" />
+    <Content Include="Resources\medium_inv_misc_tournaments_tabard_bloodelf.jpg" />
+    <None Include="Resources\medium_spell_fire_frostresistancetotem.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

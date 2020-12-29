@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrinityItemCreator", "TrinityItemCreator\TrinityItemCreator.csproj", "{E1FA206C-62FC-4AB2-81A4-416D09E0495D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E1FA206C-62FC-4AB2-81A4-416D09E0495D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1FA206C-62FC-4AB2-81A4-416D09E0495D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1FA206C-62FC-4AB2-81A4-416D09E0495D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1FA206C-62FC-4AB2-81A4-416D09E0495D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A57F5328-6A0D-4EF5-AF3F-F1F23E3E62A3}
+	EndGlobalSection
+EndGlobal
