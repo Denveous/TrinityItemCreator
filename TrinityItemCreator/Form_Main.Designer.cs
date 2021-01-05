@@ -34,11 +34,6 @@
             this.button7 = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mySQLConnectionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
             this.importToToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.databaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sQLDBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,6 +42,7 @@
             this.importToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.databaseImportToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.sQLToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.templateToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.templateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadDefaultTemplateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadCustomTemplateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,6 +53,11 @@
             this.randomStatsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.resetAllFieldsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.makeItemdbcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mySQLConnectionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
             this.aBOUTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -229,7 +230,6 @@
             this.tb_item_description = new MyTextBox();
             this.tb_item_name = new MyTextBox();
             this.TextBoxItemEntry = new MyTextBox();
-            this.templateToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -318,58 +318,6 @@
             this.menuStrip1.TabIndex = 30;
             this.menuStrip1.Text = " ";
             // 
-            // settingsToolStripMenuItem
-            // 
-            this.settingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mySQLConnectionToolStripMenuItem,
-            this.toolStripMenuItem1,
-            this.toolStripSeparator2,
-            this.toolStripComboBox1});
-            this.settingsToolStripMenuItem.Image = global::TrinityItemCreator.Properties.Resources.icon_setting;
-            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(77, 27);
-            this.settingsToolStripMenuItem.Text = "Settings";
-            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
-            // 
-            // mySQLConnectionToolStripMenuItem
-            // 
-            this.mySQLConnectionToolStripMenuItem.Image = global::TrinityItemCreator.Properties.Resources.icon_db_connection;
-            this.mySQLConnectionToolStripMenuItem.Name = "mySQLConnectionToolStripMenuItem";
-            this.mySQLConnectionToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
-            this.mySQLConnectionToolStripMenuItem.Text = "Database Connection";
-            this.mySQLConnectionToolStripMenuItem.Visible = false;
-            this.mySQLConnectionToolStripMenuItem.Click += new System.EventHandler(this.mySQLConnectionToolStripMenuItem_Click);
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Enabled = false;
-            this.toolStripMenuItem1.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.toolStripMenuItem1.Image = global::TrinityItemCreator.Properties.Resources.icon_sql_prefix;
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(210, 22);
-            this.toolStripMenuItem1.Text = "Sql prefix";
-            this.toolStripMenuItem1.Visible = false;
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(207, 6);
-            this.toolStripSeparator2.Visible = false;
-            // 
-            // toolStripComboBox1
-            // 
-            this.toolStripComboBox1.AutoSize = false;
-            this.toolStripComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.toolStripComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.toolStripComboBox1.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.toolStripComboBox1.Items.AddRange(new object[] {
-            "SQL Prefix [INSERT]",
-            "SQL Prefix [REPLACE]"});
-            this.toolStripComboBox1.Name = "toolStripComboBox1";
-            this.toolStripComboBox1.Size = new System.Drawing.Size(150, 23);
-            this.toolStripComboBox1.Visible = false;
-            this.toolStripComboBox1.SelectedIndexChanged += new System.EventHandler(this.ToolStripComboBox1_SelectedIndexChanged);
-            // 
             // importToToolStripMenuItem
             // 
             this.importToToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -449,6 +397,13 @@
             this.sQLToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.sQLToolStripMenuItem1.Text = ".SQL";
             // 
+            // templateToolStripMenuItem1
+            // 
+            this.templateToolStripMenuItem1.Image = global::TrinityItemCreator.Properties.Resources.icon_right_arrow_1;
+            this.templateToolStripMenuItem1.Name = "templateToolStripMenuItem1";
+            this.templateToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.templateToolStripMenuItem1.Text = "Template";
+            // 
             // templateToolStripMenuItem
             // 
             this.templateToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -469,7 +424,7 @@
             this.loadDefaultTemplateToolStripMenuItem.Image = global::TrinityItemCreator.Properties.Resources.icon_right_arrow_3;
             this.loadDefaultTemplateToolStripMenuItem.Name = "loadDefaultTemplateToolStripMenuItem";
             this.loadDefaultTemplateToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.D)));
-            this.loadDefaultTemplateToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.loadDefaultTemplateToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
             this.loadDefaultTemplateToolStripMenuItem.Text = "Defaults";
             this.loadDefaultTemplateToolStripMenuItem.Click += new System.EventHandler(this.LoadDefaultTemplateToolStripMenuItem_Click);
             // 
@@ -479,14 +434,14 @@
             this.loadCustomTemplateToolStripMenuItem.Image = global::TrinityItemCreator.Properties.Resources.icon_right_arrow_1;
             this.loadCustomTemplateToolStripMenuItem.Name = "loadCustomTemplateToolStripMenuItem";
             this.loadCustomTemplateToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.C)));
-            this.loadCustomTemplateToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.loadCustomTemplateToolStripMenuItem.Text = "Custom";
+            this.loadCustomTemplateToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.loadCustomTemplateToolStripMenuItem.Text = "Load Custom";
             this.loadCustomTemplateToolStripMenuItem.Click += new System.EventHandler(this.LoadCustomTemplateToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(187, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(190, 6);
             // 
             // saveCurrentTemplateToolStripMenuItem
             // 
@@ -494,7 +449,7 @@
             this.saveCurrentTemplateToolStripMenuItem.Image = global::TrinityItemCreator.Properties.Resources.icon_right_arrow_2;
             this.saveCurrentTemplateToolStripMenuItem.Name = "saveCurrentTemplateToolStripMenuItem";
             this.saveCurrentTemplateToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.S)));
-            this.saveCurrentTemplateToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.saveCurrentTemplateToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
             this.saveCurrentTemplateToolStripMenuItem.Text = "Save Custom";
             this.saveCurrentTemplateToolStripMenuItem.Click += new System.EventHandler(this.SaveCurrentTemplateToolStripMenuItem_Click);
             // 
@@ -543,6 +498,58 @@
             this.makeItemdbcToolStripMenuItem.Size = new System.Drawing.Size(114, 27);
             this.makeItemdbcToolStripMenuItem.Text = "Make Item.dbc";
             this.makeItemdbcToolStripMenuItem.Click += new System.EventHandler(this.makeItemdbcToolStripMenuItem_Click);
+            // 
+            // settingsToolStripMenuItem
+            // 
+            this.settingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mySQLConnectionToolStripMenuItem,
+            this.toolStripMenuItem1,
+            this.toolStripSeparator2,
+            this.toolStripComboBox1});
+            this.settingsToolStripMenuItem.Image = global::TrinityItemCreator.Properties.Resources.icon_setting;
+            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(77, 27);
+            this.settingsToolStripMenuItem.Text = "Settings";
+            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
+            // 
+            // mySQLConnectionToolStripMenuItem
+            // 
+            this.mySQLConnectionToolStripMenuItem.Image = global::TrinityItemCreator.Properties.Resources.icon_db_connection;
+            this.mySQLConnectionToolStripMenuItem.Name = "mySQLConnectionToolStripMenuItem";
+            this.mySQLConnectionToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.mySQLConnectionToolStripMenuItem.Text = "Database Connection";
+            this.mySQLConnectionToolStripMenuItem.Visible = false;
+            this.mySQLConnectionToolStripMenuItem.Click += new System.EventHandler(this.mySQLConnectionToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Enabled = false;
+            this.toolStripMenuItem1.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.toolStripMenuItem1.Image = global::TrinityItemCreator.Properties.Resources.icon_sql_prefix;
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(210, 22);
+            this.toolStripMenuItem1.Text = "Sql prefix";
+            this.toolStripMenuItem1.Visible = false;
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(207, 6);
+            this.toolStripSeparator2.Visible = false;
+            // 
+            // toolStripComboBox1
+            // 
+            this.toolStripComboBox1.AutoSize = false;
+            this.toolStripComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.toolStripComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.toolStripComboBox1.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.toolStripComboBox1.Items.AddRange(new object[] {
+            "SQL Prefix [INSERT]",
+            "SQL Prefix [REPLACE]"});
+            this.toolStripComboBox1.Name = "toolStripComboBox1";
+            this.toolStripComboBox1.Size = new System.Drawing.Size(150, 23);
+            this.toolStripComboBox1.Visible = false;
+            this.toolStripComboBox1.SelectedIndexChanged += new System.EventHandler(this.ToolStripComboBox1_SelectedIndexChanged);
             // 
             // aBOUTToolStripMenuItem
             // 
@@ -3711,13 +3718,6 @@
             this.TextBoxItemEntry.Enter += new System.EventHandler(this.Watermark_myTextBox_Enter);
             this.TextBoxItemEntry.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Watermark_myTextBox_KeyPress);
             this.TextBoxItemEntry.Leave += new System.EventHandler(this.Watermark_myTextBox_Leave);
-            // 
-            // templateToolStripMenuItem1
-            // 
-            this.templateToolStripMenuItem1.Image = global::TrinityItemCreator.Properties.Resources.icon_right_arrow_1;
-            this.templateToolStripMenuItem1.Name = "templateToolStripMenuItem1";
-            this.templateToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.templateToolStripMenuItem1.Text = "Template";
             // 
             // Form_Main
             // 

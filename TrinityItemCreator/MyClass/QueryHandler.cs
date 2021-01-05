@@ -163,7 +163,7 @@ namespace TrinityItemCreator.MyClass
                 + d1 + MyData.Field_class.ToString()
                 + d1 + MyData.Field_subclass.ToString()
                 + d1 + MyData.Field_SoundOverrideSubclass.ToString()
-                + d1 + "'" + MyData.Field_name + "'"
+                + d1 + "'" + MyData.Field_name.Replace("'", "''") + "'"
                 + d1 + MyData.Field_displayid.ToString()
                 + d1 + MyData.Field_Quality.ToString()
                 + d1 + MyData.Field_Flags.ToString()
@@ -261,7 +261,7 @@ namespace TrinityItemCreator.MyClass
                 + d1 + MyData.Field_spellcategory_5.ToString()
                 + d1 + MyData.Field_spellcategorycooldown_5.ToString()
                 + d1 + MyData.Field_bonding.ToString()
-                + d1 + "'" + MyData.Field_description + "'"
+                + d1 + "'" + MyData.Field_description.Replace("'", "''") + "'"
                 + d1 + MyData.Field_PageText.ToString()
                 + d1 + MyData.Field_LanguageID.ToString()
                 + d1 + MyData.Field_PageMaterial.ToString()
