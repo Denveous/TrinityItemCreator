@@ -169,8 +169,7 @@ namespace TrinityItemCreator
                 "Intial Code: Asandru93 [artister.hd@gmail.com]\n"
                 + "\n"
                 +"CONTRIBUTORS:\n \n"
-                + " * dentuko (Code Fixes, ui revamp, new features)\n"
-                + " * Sdyees (Code Cleanup)\n * Freddan962 (Item.dbc Converter)\n * Cyber Mist (Code Fixes)\n"
+                + " * Sdyees (Code Cleanup)\n * Freddan962 (Item.dbc Converter)\n * Cyber Mist (Code Fixes)\n * Denveous (Code Fixes, ui changes)\n"
                 );
         }
 
